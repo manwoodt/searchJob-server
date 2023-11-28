@@ -95,4 +95,4 @@ Implement resume text processing logic from the Day02 project.
 - Check the get resume endpoint, receive the hardcoded resume and tags with Postman
 - Check the get tags endpoint, receive the hardcoded tags
 
-💡 [Tap here](https://forms.gle/QKw7mAuvx9gyBk6k6) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
+💡 [Tap here](https://forms.gle/QKw7mAuvx9gyBk6k6) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.
