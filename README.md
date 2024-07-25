@@ -1,5 +1,7 @@
 # Hello!   
 
+💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+
 Glad to see you on our next project! You worked hard, learnt a lot of interesting things about Kotlin, and now you are ready to develop a real client-server application! We’ll implement our ideas of the job search project in a mobile app with a server side. So, let’s start! Today we will learn how to write a simple server-side part with a Ktor framework.
 
 We'll also get acquainted with some important architecture principles (remember Team00 day, there were a few words about them). The most widely spread architecture principles in projects of different purpose (server, mobile, etc.) are SOLID and Clean Architecture.  
@@ -94,5 +96,3 @@ Implement resume text processing logic from the Day02 project.
 - Make a request to save a resume with postman. You should see logging of created tags
 - Check the get resume endpoint, receive the hardcoded resume and tags with Postman
 - Check the get tags endpoint, receive the hardcoded tags
-
-💡 [Tap here](https://forms.gle/QKw7mAuvx9gyBk6k6) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.
