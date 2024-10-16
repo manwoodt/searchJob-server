@@ -3,7 +3,8 @@ val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.9.22" // Обновите до актуальной версии Kotlin
+    kotlin("jvm") version "2.0.0"
+    kotlin("plugin.serialization") version "1.8.0"
     id("io.ktor.plugin") version "2.3.8"
 }
 
@@ -21,6 +22,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")

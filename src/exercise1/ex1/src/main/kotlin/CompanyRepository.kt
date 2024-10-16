@@ -1,6 +1,3 @@
-import com.kotlin.Company
-
-
 object CompanyRepository {
     private val companies = listOf(
         Company("Yandex", "IT", "contact@yandex.com"),
