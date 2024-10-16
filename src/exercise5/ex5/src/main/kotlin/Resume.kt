@@ -130,6 +130,6 @@ object ResumeRepository {
     }
 
     fun getResumeById(id: Int): Resume? {
-        return resumes.find { it.candidateInfo.fullName == id.toString() } // Поиск по ID (в данном случае по имени)
+        return resumes.getOrNull(id)
     }
 }
