@@ -62,6 +62,15 @@ object CompanyRepository {
     fun getAllCompanies(): List<Company> {
         return companies
     }
+    fun getAllVacancies():List<Vacancy>{
+        return companies.flatMap { it.vacancies }
+    }
+
+    fun getVacancyById(id:Int):Vacancy?{
+        val vacancies = getAllVacancies()
+        return vacancies.getOrNull(id)
+    }
+
     fun getCompanyById(id:Int):Company?{
         return companies.getOrNull(id)
     }
