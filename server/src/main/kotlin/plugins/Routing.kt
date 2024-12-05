@@ -1,7 +1,6 @@
 package plugins
 
 import CompanyRepository
-import Resume
 import ResumeRepository
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -9,6 +8,7 @@ import io.ktor.server.plugins.statuspages.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import models.Resume
 
 fun Application.configureRouting() {
     install(StatusPages) {

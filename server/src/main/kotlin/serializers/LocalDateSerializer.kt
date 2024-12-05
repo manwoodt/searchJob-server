@@ -1,3 +1,5 @@
+package serializers
+
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializer
 import kotlinx.serialization.KSerializer

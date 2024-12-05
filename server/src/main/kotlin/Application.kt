@@ -1,9 +1,10 @@
 import plugins.configureSerialization
 import io.ktor.server.application.*
+import io.ktor.server.netty.*
 import plugins.configureRouting
 
 fun main(args: Array<String>) {
-    io.ktor.server.netty.EngineMain.main(args)
+    EngineMain.main(args)
 }
 
 fun Application.module() {

@@ -1,22 +1,7 @@
 import kotlinx.serialization.Serializable
+import models.Company
+import models.Vacancy
 
-@Serializable
-data class Company(
-    val id:Int,
-    val name: String,
-    val fieldOfActivity: String,
-    val vacancies: List<Vacancy>,
-    val contacts: String
-)
-
-@Serializable
-data class Vacancy(
-    val id:Int,
-    val profession: String,
-    val level: String,
-    val salary: Int,
-    val description: String
-)
 
 object CompanyRepository {
     private val companies: List<Company> = listOf(
