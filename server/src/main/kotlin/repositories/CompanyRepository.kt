@@ -1,4 +1,5 @@
-import kotlinx.serialization.Serializable
+package repositories
+
 import models.Company
 import models.Vacancy
 

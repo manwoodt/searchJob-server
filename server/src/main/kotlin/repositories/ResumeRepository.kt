@@ -4,7 +4,6 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 
-
 object ResumeRepository {
     private val resumes = listOf(
         Resume(
