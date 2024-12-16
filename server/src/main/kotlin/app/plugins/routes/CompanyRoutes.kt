@@ -4,11 +4,11 @@ import io.ktor.http.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import domain.repositories.CompanyRepository
+import io.ktor.server.application.call
 
 fun Route.companyRoutes(repository: CompanyRepository){
     get("/companies") {
-        val companies = repository.getAllCompanies()
-        call.respond(companies)
+        call.respond(repository.getAllCompanies())
     }
 
     get("/companies/{id}") {

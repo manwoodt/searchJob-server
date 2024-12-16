@@ -6,6 +6,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import domain.models.Resume
 import domain.repositories.ResumeRepository
+import io.ktor.server.application.call
 
 fun Route.resumeRoutes(repository: ResumeRepository){
     get("/resumes"){

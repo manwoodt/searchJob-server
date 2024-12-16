@@ -4,6 +4,7 @@ import io.ktor.http.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import domain.repositories.CompanyRepository
+import io.ktor.server.application.call
 
 fun Route.vacancyRoutes(repository: CompanyRepository){
     get("/vacancies") {
