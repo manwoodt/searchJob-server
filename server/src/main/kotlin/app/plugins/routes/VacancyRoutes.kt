@@ -1,20 +1,20 @@
-package routes
+package app.plugins.routes
 
 import io.ktor.http.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import repositories.CompanyRepository
+import domain.repositories.CompanyRepository
 
-fun Route.vacancyRoutes(){
+fun Route.vacancyRoutes(repository: CompanyRepository){
     get("/vacancies") {
-        val vacancies = CompanyRepository.getAllVacancies()
+        val vacancies = repository.getAllVacancies()
         call.respond(vacancies)
     }
 
     get("/vacancies/{id}") {
         val id = call.parameters["id"]?.toIntOrNull()
         if (id != null) {
-            val vacancy = CompanyRepository.getVacancyById(id)
+            val vacancy = repository.getVacancyById(id)
             if (vacancy != null)
                 call.respond(vacancy)
             else

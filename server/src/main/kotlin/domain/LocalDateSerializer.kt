@@ -1,4 +1,4 @@
-package serializers
+package domain
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializer

@@ -1,11 +1,10 @@
-package repositories
+package data.hardCodedInformation
 
-import models.Company
-import models.Vacancy
+import domain.models.Company
+import domain.models.Vacancy
 
-
-object CompanyRepository {
-    private val companies: List<Company> = listOf(
+object HardCodedCompanies {
+     val companies: List<Company> = listOf(
         Company(
             1,
             "Sber",
@@ -44,20 +43,4 @@ object CompanyRepository {
             "89021237654"
         )
     )
-
-    fun getAllCompanies(): List<Company> {
-        return companies
-    }
-    fun getAllVacancies():List<Vacancy>{
-        return companies.flatMap { it.vacancies }
-    }
-
-    fun getVacancyById(id:Int):Vacancy?{
-        val vacancies = getAllVacancies()
-        return vacancies.find { it.id == id}
-    }
-
-    fun getCompanyById(id:Int):Company?{
-        return companies.find { it.id == id}
-    }
 }

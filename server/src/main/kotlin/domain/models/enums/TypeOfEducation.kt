@@ -1,4 +1,4 @@
-package models.enums
+package domain.models.enums
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -1,11 +1,18 @@
-import models.*
-import models.enums.*
+package data.hardCodedInformation
+
+import domain.models.CandidateEducation
+import domain.models.CandidateInformation
+import domain.models.CandidateJobExperience
+import domain.models.Contacts
+import domain.models.Resume
+import domain.models.enums.Profession
+import domain.models.enums.TypeOfEducation
+import domain.models.enums.WillingnessOfRelocation
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-
-object ResumeRepository {
-    private val resumes = listOf(
+object HardCodedResumes {
+    val resumes = listOf(
         Resume(
             candidateInfo = CandidateInformation(
                 fullName = "Vasiliev Sergei Petrovich",
@@ -31,31 +38,4 @@ object ResumeRepository {
             tags= listOf("Some tags are here")
         )
     )
-
-    fun getResumes(): List<Resume>{
-        return resumes
-    }
-
-    fun getResumeById(id: Int): Resume? {
-        return resumes.getOrNull(id-1)
-    }
-
-    fun createTags(resume: Resume): List<String> {
-        val tags = mutableListOf<String>()
-
-        if (resume.candidateInfo.profession == Profession.DEV) {
-            tags.add("Developer")
-        }
-        if (resume.education.any { it.type == TypeOfEducation.HIGHER }) {
-            tags.add("Higher Education")
-        }
-        if (resume.jobExperience.isNotEmpty()) {
-            tags.add("Experienced")
-        }
-
-        println("Created tags for resume: $tags")
-
-        return tags
-    }
-
 }

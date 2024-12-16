@@ -1,9 +1,11 @@
-package models
+package domain.models
 
-import serializers.LocalDateSerializer
+import domain.models.enums.Profession
+import domain.models.enums.TypeOfEducation
+import domain.models.enums.WillingnessOfRelocation
+import domain.LocalDateSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import models.enums.*
 import java.time.LocalDate
 
 @Serializable
